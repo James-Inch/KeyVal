@@ -1,7 +1,6 @@
 @import 'src/assets/styles/base/baseExport';
 
 .sampleComponent {
-  height: fit-content;
   width: 90vw;
   border-radius: 3px;
   color: $white;
@@ -45,7 +44,14 @@
     height: 30px; 
     width: 100%;
     margin: 10px; 
-    display: flex;
+    display: grid;
+
+
+   
+  }
+  .keyVal{
+    display:grid;
+    grid-template-columns: 1fr 1fr 30px;
   }
 
   .submitButton{
