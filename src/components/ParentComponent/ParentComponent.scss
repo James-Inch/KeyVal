@@ -1,0 +1,58 @@
+@import 'src/assets/styles/base/baseExport';
+
+.sampleComponent {
+  height: fit-content;
+  width: 90vw;
+  border-radius: 3px;
+  color: $white;
+  font-size: 22px;
+  background: $light-grey;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  
+
+  p {
+    background: $blue;
+    display: block;
+    height: fit-content;
+    width: 100%;
+    padding: 1em; 
+    font-size: 12px;
+    font-weight: bold;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-align: left;
+  }
+
+  header {
+    font-size: 12px;
+    padding: 1em;
+
+  }
+
+  button.addButton{
+    height: fit-content;
+    background: #fff;
+    border: none; 
+    text-decoration: none;
+    border-radius: 2px;
+    color: $grey;
+  }
+
+  .keyValueContainer {
+    background: $grey;
+    height: 30px; 
+    width: 100%;
+    margin: 10px; 
+    display: flex;
+  }
+
+  .submitButton{
+    background: $blue;
+    border: none; 
+    text-decoration: none;
+    border-radius: 2px;
+  }
+}
+ 
