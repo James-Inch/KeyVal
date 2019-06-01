@@ -31,9 +31,9 @@
 
   }
 
-  button.addButton{
+  .addButton{
     height: fit-content;
-    background: #fff;
+    background: $white;
     border: none; 
     text-decoration: none;
     border-radius: 2px;
@@ -50,9 +50,13 @@
 
   .submitButton{
     background: $blue;
+    color: $white;
+    padding: .5em;
     border: none; 
     text-decoration: none;
     border-radius: 2px;
+    width: 100%;
+    margin: 10px 10px 30px;
   }
 }
  
