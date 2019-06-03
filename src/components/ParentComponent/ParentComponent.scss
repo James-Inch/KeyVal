@@ -39,13 +39,7 @@
     text-decoration: none;
     border-radius: 2px;
     color: $grey;
-  }
-
-  .addButton:active, .addButton:focus {
-    outline-color: rgba(255, 255, 255, 0.0);
-  }
-
-  
+  }  
 
   .keyValueContainer {
     width: 100%;
@@ -74,9 +68,7 @@
       font-size: 10px;
       font-weight: bolder;
     }
-    button:active, button:focus {
-      outline-color: rgba(255, 255, 255, 0.0);
-    }
+
   }
 
   .submitButton{
