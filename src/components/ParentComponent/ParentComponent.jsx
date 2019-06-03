@@ -54,9 +54,11 @@ class ParentComponent extends Component {
     let keyVals = {}
     this.state.arr.forEach(function(obj){
       keyVals[obj.k] = obj.v;
+      event.preventDefault();
+      
     });  
     console.log(keyVals);
-    event.preventDefault();
+    
   };
 
 
