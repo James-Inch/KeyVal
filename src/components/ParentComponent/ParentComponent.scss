@@ -1,12 +1,13 @@
 @import 'src/assets/styles/base/baseExport';
 
-.sampleComponent {
+.parentComponent {
   width: 90vw;
   border-radius: 3px;
   color: $white;
   font-size: 22px;
   background: $light-grey;
-  display: flex;
+  display: flex; 
+  flex-basis: auto;
   flex-wrap: wrap;
   align-items: baseline;
   
@@ -40,18 +41,31 @@
   }
 
   .keyValueContainer {
-    background: $grey;
-    height: 30px; 
     width: 100%;
     margin: 10px; 
-    display: grid;
-
-
-   
+    display: grid;  
   }
   .keyVal{
     display:grid;
-    grid-template-columns: 1fr 1fr 30px;
+    grid-template-columns: 1fr 1fr 35px;
+    
+    input {
+      padding: .5em;
+      border: none;
+      margin: 3px;
+      border-radius: 3px;
+    }
+    
+    button {
+      background: $red; 
+      color: $white;
+      padding: .5em;
+      margin: 3px;
+      border: none;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: bold;
+    }
   }
 
   .submitButton{
@@ -60,9 +74,9 @@
     padding: .5em;
     border: none; 
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 3px;
     width: 100%;
-    margin: 10px 10px 30px;
+    margin: 30px 0 20px;
   }
 }
  

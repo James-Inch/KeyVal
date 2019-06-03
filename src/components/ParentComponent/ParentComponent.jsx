@@ -64,7 +64,7 @@ class ParentComponent extends Component {
     return (
       <div
         data-test-hook="ParentComponentPage"
-        className={styles.sampleComponent}
+        className={styles.parentComponent}
       >
         <p>this is the parent component</p>
 

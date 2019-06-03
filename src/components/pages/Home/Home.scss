@@ -1,9 +1,14 @@
 @import 'src/assets/styles/base/baseExport';
 
-.home {
-  height: 100vh;
+html {
+  height: 100%;
   width: 100%;
   background: $grey;
+}
+
+.home {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
