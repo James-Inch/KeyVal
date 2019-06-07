@@ -22,22 +22,24 @@ class ParentComponent extends Component {
   addRow() {
     this.setState({arr: this.state.arr.concat([{
       k: "",
-      v: ""
+      v: "",
+      key: ""
     }])})
   }
 
-  removeRow(index) {
-    var array = [...this.state.arr];
-    array.splice(index, 1);
-    this.setState({arr: array});
-  }
+  removeRow = i => () => {
+    this.setState({
+      arr: this.state.arr.filter((s, sidx) => i !== sidx)
+    });
+  };
 
   handleRowKeyChange = idx => evt => {
     const array = this.state.arr.map((obj, sidx) => {
       if (idx !== sidx) return obj;
-      return { ...obj, k: evt.target.value };
+      return { ...obj, k: evt.target.value, key: evt.target.key };
     });
-
+    
+    console.log({arr: array});
     this.setState({ arr: array });
   };
 
@@ -58,7 +60,6 @@ class ParentComponent extends Component {
       
     });  
     console.log(keyVals);
-    
   };
 
 
@@ -78,9 +79,9 @@ class ParentComponent extends Component {
           {this.state.arr.map((obj, i) => {
             return (
               <div key={i} className={styles.keyVal}>
-                <input value={obj.k} onChange={this.handleRowKeyChange(i)} placeholder="key" />
-                <input value={obj.v} onChange={this.handleRowValueChange(i)} placeholder="value" />
-                <button onClick={this.removeRow} >X</button>
+                <input  value={obj.k} onChange={this.handleRowKeyChange(i)} placeholder="key" />
+                <input  value={obj.v} onChange={this.handleRowValueChange(i)} placeholder="value" />
+                <button onClick={this.removeRow(i)} >X</button>
               </div>
             );
           })}
