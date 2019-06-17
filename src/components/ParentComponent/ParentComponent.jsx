@@ -38,8 +38,6 @@ class ParentComponent extends Component {
       if (idx !== sidx) return obj;
       return { ...obj, k: evt.target.value, key: evt.target.key };
     });
-    
-    console.log({arr: array});
     this.setState({ arr: array });
   };
 
